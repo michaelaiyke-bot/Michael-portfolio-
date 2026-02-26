@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Aiyke | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <h2>Michael</h2>
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <h1>Michael Aiyke</h1>
+    <p>Creative Web Developer & Graphics Designer</p>
+    <button id="btn">Hire Me</button>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate web developer and graphic designer focused on building 
+      clean, responsive, and interactive websites and professional graphics 
+      that leave a lasting impression.
+    </p>
+  </section>
+  
+  <!-- SKILLS -->
+<section id="skills" class="skills">
+  <h2>My Skills</h2>
+  <div class="skill">
+    <p>HTML & CSS</p>
+    <div class="progress"><div style="width: 95%;"></div></div>
+  </div>
+  <div class="skill">
+    <p>JavaScript</p>
+    <div class="progress"><div style="width: 30%;"></div></div>
+  </div>
+  <div class="skill">
+    <p>Graphics Design</p>
+    <div class="progress"><div style="width: 90%;"></div></div>
+  </div>
+  <div class="skill">
+    <p>Drumming</p>
+    <div class="progress"><div style="width: 90%;"></div></div>
+  </div>
+</section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+
+    <!-- Tabs -->
+    <div class="project-tabs">
+      <button data-type="web">Web Development</button>
+      <button data-type="graphics">Graphics Design</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="project-cards">
+      <!-- Web Projects -->
+      <div class="card" data-type="web">
+        <h3>Portfolio Website</h3>
+        <p>Responsive personal website built with HTML, CSS, and JS.</p>
+        <a href="https://example.com" target="_blank">View Profile</a>
+      </div>
+      <div class="card" data-type="web">
+        <h3>Landing Page</h3>
+        <p>Clean landing page for product showcase with animations.</p>
+        <a href="https://example.com/profile2" target="_blank">View Profile</a>
+      </div>
+      <div class="card" data-type="web">
+        <h3>E-commerce Store</h3>
+        <p>Fully functional responsive online store.</p>
+        <a href="https://example.com/profile3" target="_blank">View Profile</a>
+      </div>
+
+      <!-- Graphics Projects -->
+      <div class="card" data-type="graphics">
+        <h3>Logo Design</h3>
+        <p>Professional logos for brands and businesses.</p>
+        <a href="https://example.com/profile4" target="_blank">View Profile</a>
+      </div>
+      <div class="card" data-type="graphics">
+        <h3>Flyer Design</h3>
+        <p>Marketing flyers that capture attention.</p>
+        <a href="https://example.com/profile5" target="_blank">View Profile</a>
+      </div>
+      <div class="card" data-type="graphics">
+        <h3>Product Mockups</h3>
+        <p>High-quality product mockups for presentations.</p>
+        <a href="https://example.com/profile6" target="_blank">View Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="social-media">
+      <a href="https://wa.me/09163528959" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://Facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Michael Aiyke. All Rights Reserved.</p>
+    <div class="social-media-footer">
+      <a href="https://wa.me/09163528959" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

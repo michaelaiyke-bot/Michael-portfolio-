@@ -1,0 +1,127 @@
+/* ---------- GLOBAL ---------- */
+*{margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+body{ background:#f5f5f5; color:#151B54; overflow-x:hidden; scroll-behavior:smooth; }
+html{
+  scroll-behavior: smooth;
+}
+/* ---------- NAV ---------- */
+nav{ display:flex; justify-content:space-between; align-items:center; padding:15px 40px; position:fixed; width:100%; background:#151B54; color:#fff; z-index:1000; border-bottom:3px solid #00AEEF; }
+nav h2{ font-size:1.5rem; cursor:pointer;}
+nav ul{ list-style:none; display:flex; gap:25px;}
+nav a{ color:white; text-decoration:none; font-weight:500; transition:0.3s;}
+nav a:hover{ color:#00AEEF; }
+.menu-toggle{ display:none; flex-direction:column; gap:5px; cursor:pointer; }
+.menu-toggle span{ width:30px; height:3px; background:#00AEEF; display:block; border-radius:3px; }
+
+/* ---------- HERO ---------- */
+.hero{
+  height:50vh;
+  background: linear-gradient(135deg,#00AEEF,#151B54);
+  display:flex; flex-direction:column;
+  justify-content:center; align-items:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  animation: heroGlow 5s infinite alternate;
+}
+.hero h1{ font-size:3rem; color:white; margin-bottom:10px; animation: fadeInUp 1s ease forwards;}
+.hero p{ font-size:1.5rem; color:#F0F0F0; margin-bottom:20px; max-width:600px; animation: fadeInUp 1.5s ease forwards;}
+.hero button{ padding:12px 35px; font-size:1rem; background:white; color:#151B54; border:none; border-radius:25px; cursor:pointer; transition:all 0.3s; animation: fadeInUp 2s ease forwards;}
+.hero button:hover{ transform:scale(1.05); background:#F0F0F0; }
+
+@keyframes heroGlow{
+  0%{ filter:brightness(1); }
+  50%{ filter:brightness(1.1); }
+  100%{ filter:brightness(1); }
+}
+
+@keyframes fadeInUp{
+  0%{opacity:0; transform:translateY(20px);}
+  100%{opacity:1; transform:translateY(0);}
+}
+
+/* ---------- ABOUT ---------- */
+.about{ padding:60px 40px; max-width:900px; margin:50px auto; text-align:center; background:#FFFFFF; color:#151B54; border-radius:20px; box-shadow:0 10px 35px rgba(0,174,239,0.1);}
+.about h2{ font-size:2.8rem; margin-bottom:20px; border-bottom:4px solid #00AEEF; display:inline-block; padding-bottom:8px; }
+.about p{ font-size:1.2rem; line-height:1.6; }
+
+/* SKILLS */
+#skills {
+  padding: 60px 40px;
+  text-align: center;
+  background: #F0F0F0;
+  color: #151B54;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill p {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.progress {
+  background: #e0e0e0;
+  height: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  background: #00AEEF; /* tech-blue accent */
+  border-radius: 10px;
+  width: 0; /* will animate */
+  transition: width 1.5s ease-in-out;
+}
+
+/* ---------- PROJECTS ---------- */
+.projects{ padding:60px 40px; text-align:center; background:#f5f5f5; }
+.project-tabs{ display:flex; justify-content:center; gap:25px; flex-wrap:wrap; margin-bottom:35px; }
+.project-tabs button{ padding:12px 30px; border:2px solid #151B54; border-radius:25px; background:#151B54; color:white; cursor:pointer; transition:0.3s; }
+.project-tabs button.active, .project-tabs button:hover{ background:#00AEEF; color:white; }
+
+.project-cards{ display:flex; justify-content:center; align-items:flex-start; gap:25px; flex-wrap:wrap; }
+.card{ background:#151B54; color:white; padding:25px; width:270px; border-radius:25px; box-shadow:0 10px 35px rgba(0,174,239,0.2); transition:transform 0.3s, box-shadow 0.3s; position:relative; opacity:0; transform:translateY(30px);}
+.card.show{ opacity:1; transform:translateY(0); transition:all 0.5s ease-in-out; }
+.card::before, .card::after{ content:""; position:absolute; width:6px; height:6px; border-radius:50%; background:#00AEEF; animation:pulseGlow 3s infinite ease-in-out; }
+.card::before{ top:15px; left:15px; } .card::after{ bottom:15px; right:15px; }
+@keyframes pulseGlow{0%,100%{transform:scale(1);opacity:0.6;}50%{transform:scale(1.5);opacity:1;}}
+
+.card:hover{ transform:translateY(-7px); box-shadow:0 12px 40px rgba(0,174,239,0.3);}
+.card h3{ margin-top:0;}
+.card a{ display:inline-block; margin-top:18px; padding:10px 25px; border-radius:20px; background:#00AEEF; color:white; text-decoration:none; font-weight:500; transition:all 0.3s;}
+.card a:hover{ background:#0078A0; }
+
+/* ---------- CONTACT ---------- */
+.contact{ padding:60px 40px; max-width:520px; margin:50px auto; text-align:center; background:#FFFFFF; color:#151B54; border-radius:25px; box-shadow:0 10px 35px rgba(0,174,239,0.2);}
+.contact form{ display:flex; flex-direction:column; gap:18px;}
+.contact input, .contact textarea{ padding:14px; border-radius:25px; border:2px solid #00AEEF; background:#f5f5f5; color:#151B54;}
+.contact textarea{ height:110px; resize:none;}
+.contact button{ padding:14px 35px; border:none; border-radius:30px; background:#00AEEF; color:white; font-weight:500; cursor:pointer; transition:all 0.3s;}
+.contact button:hover{ background:#0078A0; box-shadow:0 0 25px #00AEEF; }
+
+.social-media{ margin-top:20px; display:flex; justify-content:center; gap:20px;}
+.social-media a{ color:#151B54; font-size:1.8rem; transition:0.3s;}
+.social-media a:hover{ color:#00AEEF; }
+
+/* ---------- FOOTER ---------- */
+footer{ background:#151B54; color:white; text-align:center; padding:25px 20px; margin-top:50px;}
+footer .social-media-footer{ display:flex; justify-content:center; gap:20px; margin-top:10px;}
+footer .social-media-footer a{ color:white; font-size:1.5rem; transition:0.3s;}
+footer .social-media-footer a:hover{ color:#00AEEF; }
+
+/* ---------- MEDIA ---------- */
+@media (max-width:768px){
+  nav ul{ flex-direction:column; gap:15px; position:absolute; top:60px; right:0; background:#151B54; width:220px; padding:20px; display:none; border-radius:0 0 15px 15px; }
+  nav ul.active{ display:flex; }
+  .menu-toggle{ display:flex; }
+  #home h1{ font-size:2.5rem;}
+  #home p{ font-size:1.2rem; max-width:90%;}
+  .project-cards{ flex-direction:column; align-items:center;}
+  .project-tabs{ flex-direction:column; gap:15px;}
+  .project-tabs button{ width:180px;}
+  #contact{ width:90%; padding:35px;}
+}
